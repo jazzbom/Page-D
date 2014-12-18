@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<title>PageD Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
+
+<link rel="stylesheet" href="css/backgrid.css">
+<script type="text/javascript" src="js/backgrid.min.js"></script>
+<script type="text/javascript" src="js/backgrid-select-all.min.js"></script>
+<link rel="stylesheet" href="css/backgrid-select-all.min.css">
+<script type="text/javascript" src="js/data.js"></script>
+
+
+<style>
+.center {
+    text-align: center;
+}
+h1 {
+	font-family: Papyrus, fantasy;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+
+}
+</style>
+</head>
+
+<body>
+<!-------------- First page for form ------------>
+<div data-role="page" id="home">
+<!-------------- First page header ----------->
+<div data-role="header" data-theme="a">
+<a href="#help" data-role="button" data-inline="true" >Help</a>
+<h1>Page D</h1>
+<a href="#addLink" data-role="button" data-inline="true">Add Page</a>
+</div>
+<!-------------- First page main content ----------->
+<div data-role="main" class="ui-content">
+
+<div class ="center">
+
+<fieldset class="ui-grid-a">
+	<div class="ui-block-a"><button type="submit" data-theme="c" id="update">Update</button></div>
+	<div class="ui-block-b"><button type="submit" data-theme="c" id="remove">Remove</button></div>	   
+</fieldset>
+
+<!-------------- data list ----------->
+<div id="list" class="backgrid-container">
+</div>
+
+</div>
+
+</div>
+</div>
+<!-------------------------------------------------------------
+End of First page
+-------------------------------------------------------------->
+<!-------------- Second page ----------->
+<div data-role="page" id="addLink">
+<!-------------- Second page header ----------->
+<div data-role="header">
+<a href="#home" data-role="button" data-inline="true" >Back</a>
+<h1>Add New Pages</h1>
+</div>
+<!-------------- Second page main content ----------->
+<div data-role="main" class="ui-content">
+<form method="post" action="AddPage" data-ajax="false">
+
+	
+	<label for="name">1. Name tag: <span style="color:red">*</span></label>
+		<i style="color:#ccc" id="a"><small>Note: Provide a name for your page to be monitored.</small></i>
+	<input type="text" name="name" id="name" placeholder="" min="2" max="25" required/>
+	<label for="name">Site URL : <span style="color:red">*</span></label>
+	<input type="text" name="url" id="url" placeholder="Last Name" min="5" required/>
+
+
+	<input type="submit" data-inline="true" value="Add To Database">
+</form>
+</div>
+</div>
+<!-------------------------------------------------------------
+End of Second page
+-------------------------------------------------------------->
+
+<!-------------- Third page ----------->
+<div data-role="page" id="help">
+<!-------------- Third page header ----------->
+<div data-role="header">
+<h1>Help</h1>
+<a href="#home" data-role="button" data-inline="true">Back</a>
+</div>
+<!-------------- third page main content ----------->
+<div data-role="main" class="ui-content">
+Status types: <br>
+<b>SAFE</b>   - The webpage is clean and without any malicious code or content. <p>
+<b>DANGER</b> - The content or code of the webpage has been modified without authorisation. Possible injection of a backdoor script or XSS attack.<p>
+<b>SAFE/DANGER</b> - The content or code was modified and has reverted back to original state without authorisation. Please invesigate your code. 
+</div>
+</div>
+<!-------------------------------------------------------------
+End of third page
+-------------------------------------------------------------->
+
+
+</body>
+
+</html>
