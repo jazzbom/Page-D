@@ -3,6 +3,7 @@
 # Page D #
 
 [Click to visit the working app example](http://209.222.30.153:8080/MaliciousCodeDetector/)
+*Note: The live app has been set to monitors changes at every 72 hours and hence cannot be used to detect real-time changes. This setting was required to limit server bandwidth data usage.*
 
 Malicious code detector for web applications using CRC32 checksum algorithm. (Alerts against XSS and backdoor scripts attacks)
 * Version
