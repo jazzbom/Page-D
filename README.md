@@ -10,6 +10,7 @@ v.1.0
 
 ### Description ###
 Monitors websites by comparing their generated checksum values.
+To authorize a modification simply select the page to update and click the "Update" button. 
 
 ### How do I get set up? ###
 Import into Eclipse Luna and run on any Java EE 6 compliant webserver.
