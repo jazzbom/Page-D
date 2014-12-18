@@ -14,8 +14,8 @@ To authorize a modification simply select the page to update and click the "Upda
 
 Note:
 The application uses automated scheduled tasks which run at per-defined intervals.
-To modify schedule run intervals look into the ### src/QuartzInitialiser.java ### class.
-And ### WebContent/js/data.js ###
+To modify schedule run intervals look into the *src/QuartzInitialiser.java* class.
+And *WebContent/js/data.js*
 
 ### How do I get set up? ###
 Import into Eclipse Luna and run on any Java EE 6 compliant webserver.
