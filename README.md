@@ -12,5 +12,10 @@ v.1.0
 Monitors websites by comparing their generated checksum values.
 To authorize a modification simply select the page to update and click the "Update" button. 
 
+Note:
+The application uses automated scheduled tasks which run at per-defined intervals.
+To modify schedule run intervals look into the ### src/QuartzInitialiser.java ### class.
+And ### WebContent/js/data.js ###
+
 ### How do I get set up? ###
 Import into Eclipse Luna and run on any Java EE 6 compliant webserver.
